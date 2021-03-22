@@ -3,8 +3,9 @@
   connection: local
   tasks:
   - file:
-      path: "/somedir"
+      path: "~/ethernal-job"
       state: directory
+      mode: 755
     tags: [print_action]
 
   - file:
@@ -14,7 +15,7 @@
 
   - copy:
       src: files/task.sh
-      dest: /somedir/task
+      dest: ~/ethernal-job/task
       mode: u=+x
     tags: [print_action]
 
